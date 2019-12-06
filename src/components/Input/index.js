@@ -1,9 +1,10 @@
 import React, { forwardRef } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import { Container, TInput } from './styles';
 
+// eslint-disable-next-line react/prop-types
 function Input({ style, icon, ...rest }, ref) {
   return (
     <Container style={style}>
@@ -13,14 +14,14 @@ function Input({ style, icon, ...rest }, ref) {
   );
 }
 
-Input.propTypes = {
-  icon: PropTypes.string,
-  style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
-};
+// Input.propTypes = {
+//   icon: PropTypes.string,
+//   style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+// };
 
-Input.defaultProps = {
-  icon: null,
-  style: {},
-};
+// Input.defaultProps = {
+//   icon: null,
+//   style: {},
+// };
 
 export default forwardRef(Input);
