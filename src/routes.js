@@ -28,11 +28,23 @@ export default (signedIn = false) =>
           {
             Dashboard,
             New: {
-              screen: createStackNavigator({
-                SelectProvider,
-                SelectDateTime,
-                Confirm,
-              }),
+              screen: createStackNavigator(
+                {
+                  SelectProvider,
+                  SelectDateTime,
+                  Confirm,
+                },
+                {
+                  defaultNavigationOptions: {
+                    headerTransparent: true,
+                    headerTintColor: '#FFF',
+                    headerLeftContainerStyle: {
+                      marginLeft: 20, // applies margin on "<-" icon to navigate back to previous pages
+                    },
+                  },
+                  headerLayoutPreset: 'center',
+                }
+              ),
               navigationOptions: {
                 tabBarVisible: false, // removes bottomTabNavigator when user navigates to this route
                 tabBarLabel: 'Agendar',
