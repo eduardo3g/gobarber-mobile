@@ -60,6 +60,7 @@ export default (signedIn = false) =>
             Profile,
           },
           {
+            resetOnBlur: true, // resetar a rota sempre que usuário sair dela
             tabBarOptions: {
               keyboardHidesTabBar: true, // quando o teclado abrir, ele passará por cima da tabBar
               activeTintColor: '#FFF',
