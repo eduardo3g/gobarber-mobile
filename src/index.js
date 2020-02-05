@@ -19,7 +19,7 @@ import App from './App';
 //     </Provider>
 //   );
 // }
-
+// test
 const Index = () => (
   <Provider store={store}>
     <PersistGate persistor={persistor}>
